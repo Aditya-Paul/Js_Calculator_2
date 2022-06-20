@@ -1,0 +1,51 @@
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+					0		1			2		3		4
+					-5		-4			-3		-2		-1
+					
+-------------------------------------------------------------------------------
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(-1);
+=Mango
+
+-----------
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+=Orange,Lemon,Apple,Mango
+
+-----------
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(0, 3);
+=Banana,Orange,Lemon
+
+-----------
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(-4, 3);
+=Orange,Lemon
+
+-------------
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(0, -1);
+=Banana,Orange,Lemon,Apple
+
+0 means in 0 index off array includes other indexes of array that means the whole array. -1 means only -1 index of array.. so (0, -n) means delete the n number of index of whole array
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(0, -2);
+=Banana,Orange,Lemon
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(0, -3);
+=Banana,Orange
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(0, -5);
+=nothing
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(0, -6);
+=nothing

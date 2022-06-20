@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator2</title>
+    <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="Project_calculator_2.css">
+</head>
+<body>
+    <div id="display"></div>
+    <!-- <input type="text" id="display" value=""></input> -->
+
+    <div id="buttons_part">
+        <div class="d-flex">
+            <button class="restartAndBack"  onclick="restart('AC')">AC</button>
+            <button class="restartAndBack"  onclick="backSpace('C')">C</button>
+        </div>
+        <div>
+            <button class="digit" onclick="input('7')">7</button>
+            <button class="digit" onclick="input('8')">8</button>
+            <button class="digit" onclick="input('9')">9</button>
+            <button class="digit" onclick="input('+')">+</button>
+        </div>
+        <div>
+            <button class="digit" onclick="input('4')">4</button>
+            <button class="digit" onclick="input('5')">5</button>
+            <button class="digit" onclick="input('6')">6</button>
+            <button class="digit" onclick="input('-')">-</button>
+        </div>
+        <div>
+            <button class="digit" onclick="input('1')">1</button>
+            <button class="digit" onclick="input('2')">2</button>
+            <button class="digit" onclick="input('3')">3</button>
+            <button class="digit" onclick="input('*')">*</button>
+        </div>
+        <div>
+            <button class="digit" onclick="input('0')">0</button>
+            <button class="digit" onclick="input('.')">.</button>
+            <button class="digit" id="equal" onclick="result('=')">=</button>
+            <button class="digit" onclick="input('/')">÷</button>
+        </div>
+
+    </div>
+    <script>
+        function restart(){
+            document.getElementById("display").innerText = ""
+        }
+        function backSpace(){
+            document.getElementById("display").innerText = document.getElementById("display").innerText.slice(0,-1);
+        }
+        
+        function input(digitValue){
+            document.getElementById("display").innerText += digitValue
+        }
+
+        function result(){
+            var inputNumber = document.getElementById("display").innerText
+            document.getElementById("display").innerText = eval (inputNumber)
+        }
+    </script>
+</body>
+</html>
